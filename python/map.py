@@ -16,5 +16,6 @@ for row in sys.stdin:
     category = fields[9];
 
     # What will be generated as key value and should be usedin the Shuffle function (automatic one)
+    
 
-    print '%s\t%s' % (country, "1");
+    print '%s\t%s' % (commodity, "1");

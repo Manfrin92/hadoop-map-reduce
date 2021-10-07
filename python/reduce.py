@@ -14,5 +14,5 @@ for row in sys.stdin:
     except:
         occurrency[key] = value;
 
-for country in occurrency.keys():
-    print '%s\t%s' % (occurrency[country], country);
+for commodity in occurrency.keys():
+    print '%s\t%s' % (occurrency[commodity], commodity);
