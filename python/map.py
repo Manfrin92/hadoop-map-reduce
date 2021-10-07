@@ -16,7 +16,7 @@ for row in sys.stdin:
     category = fields[9];
 
     # What will be generated as key value and should be usedin the Shuffle function (automatic one)
-    if year == '2016':
+    if year == '2016' and country == 'Brazil':
         
     
 
