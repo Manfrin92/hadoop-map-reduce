@@ -20,22 +20,27 @@ for line in csvReader:
 
     # What will be generated as key value and should be usedin the Shuffle function (automatic one)
 
-    rawRows = '%s\t%s' % (country, "1");
+    if country == "Albania":
 
-    print(rawRows);
+
+        rawRows = '%s\t%s' % (commodity, "1");
+
+
+
+        print(rawRows);
 
     # Reduce function - simulating getting the values one by one in another step (after the Shuffle function)
 
-    key, value = rawRows.split('\t', 1);
+        key, value = rawRows.split('\t', 1);
 
-    try:
-        value = int(value);
-    except:
-        continue;
-    try:
-        occurency[key] = occurency[key]+value;
-    except:
-        occurency[key] = value;
+        try:
+            value = int(value);
+        except:
+            continue;
+        try:
+            occurency[key] = occurency[key]+value;
+        except:
+            occurency[key] = value;
 
-for country in occurency.keys():
-    print('%s\t%s' % (occurency[country], country));
+    for country in occurency.keys():
+        print('%s\t%s' % (occurency[country], country));
