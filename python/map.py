@@ -17,4 +17,4 @@ for row in sys.stdin:
 
     # What will be generated as key value and should be usedin the Shuffle function (automatic one)
 
-    print '%s\t%s' % (commodity, weight);
+    print '%s\t%s' % (year+commodity, weight);
