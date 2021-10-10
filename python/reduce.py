@@ -7,12 +7,13 @@ for row in sys.stdin:
 
     try:
         value = int(value);
-    except:
+    except ValueError:
         continue;
     try:
         occurrency[key] = occurrency[key] + value;
-    except:
+    except Exception, e:
+        print str(e);
         occurrency[key] = value;
 
-for commodity in occurrency.keys():
-    print '%s\t%s' % (occurrency[commodity], commodity);
+for country in occurrency.keys():
+    print '%s\t%s' % (occurrency[country], country);
